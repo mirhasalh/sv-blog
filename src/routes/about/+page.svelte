@@ -27,12 +27,14 @@
   <section class="hero min-h-screen" aria-labelledby="about">
     <div class="hero-content w-full max-w-5xl flex-col justify-between pt-20 md:flex-row md:pt-0">
       <div class="text-center md:text-start">
-        <h1 id="about" class="merriweather text-3xl font-bold md:text-5xl">{l10n('aboutSection.heading')}</h1>
-        <p class="roboto-serif max-w-md py-6">
+        <h1 id="about" class="merriweather reveal-fade-fly-blur text-3xl font-bold md:text-5xl">
+          {l10n('aboutSection.heading')}
+        </h1>
+        <p class="roboto-serif reveal-fade-fly-blur animation-delay-150 max-w-md py-6">
           {l10n('aboutSection.paragraph')}
         </p>
       </div>
-      <img class="max-w-xs rounded-xl" src="https://irhas.site/IMG_20260819_165344_1080x1350.webp" width="1080" height="1350" alt="Irhas headshot" />
+      <img class="reveal-fade-fly-blur animation-delay-300 max-w-xs rounded-xl" src="https://irhas.site/IMG_20260819_165344_1080x1350.webp" width="1080" height="1350" alt="Irhas headshot" />
     </div>
   </section>
   <section class="hero" aria-labelledby="work-history">

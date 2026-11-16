@@ -9,7 +9,7 @@ export const socials = [
   {
     id: 1,
     name: 'GitHub',
-    url: 'https://github.com/mirhasalh/irhas'
+    url: 'https://github.com/mirhasalh/sv-blog'
   },
   {
     id: 2,

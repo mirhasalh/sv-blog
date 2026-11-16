@@ -243,7 +243,10 @@
         <button class="btn join-item" type="button" aria-label="Previous page" onclick={() => onLoadPosts('prev')} disabled={page <= 1}>
           <KeyboardDoubleArrowLeft class="h-4 w-4" />
         </button>
-        <span class="btn join-item" aria-current="page">{l10n('uiLabel.page')} {page}</span>
+        <span class="roboto-serif btn join-item" aria-current="page">
+          {l10n('uiLabel.page')}
+          {page}
+        </span>
         <button class="btn join-item" type="button" aria-label="Next page" onclick={() => onLoadPosts('next')} disabled={page >= end}>
           <KeyboardDoubleArrowRight class="h-4 w-4" />
         </button>

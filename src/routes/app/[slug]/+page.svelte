@@ -36,7 +36,7 @@
     {:else}
       <span class="roboto-serif badge badge-warning">{l10n('appStatus.testing')}</span>
     {/if}
-    <h1 id="app-name" class="merriweather pt-10 text-3xl">{mobileApp.title}</h1>
+    <h1 id="app-name" class="merriweather pt-10 text-3xl font-bold">{mobileApp.title}</h1>
     <p class="roboto-serif py-6 text-xs opacity-60">{mobileApp.shortDescription}</p>
     <figure>
       <img src={`${domain}/${mobileApp.featureGraphic}`} width={sizes.width} height={sizes.height} alt={mobileApp.title} />
@@ -79,14 +79,13 @@
           <p class="roboto-serif py-6 opacity-60">
             {l10n('privacySection.timePrefix')} <time datetime={mobileApp.effectiveDateOfPrivacy}>{formatDate(mobileApp.effectiveDateOfPrivacy)}</time>
           </p>
-          <ol class="list-mb-4 list space-y-2">
+          <ol class="list">
             {#each mobileApp.privacyDeclarations as declaration, i}
-              <li>
-                <p class="roboto-serif text-base">
-                  <strong>{i + 1}. {declaration.title}</strong>
-                  <br />
-                  {declaration.text}
-                </p>
+              <li class="list-row">
+                <div class="list-col-wrap space-y-2">
+                  <h3 class="merriweather text-xl font-bold">{i + 1}. {declaration.title}</h3>
+                  <p class="roboto-serif text-sm">{declaration.text}</p>
+                </div>
               </li>
             {/each}
           </ol>
