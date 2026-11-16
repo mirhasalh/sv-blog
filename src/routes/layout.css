@@ -1,0 +1,279 @@
+@import 'tailwindcss';
+@plugin 'daisyui';
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(97.9% 0.01 39.4);
+  --color-base-200: oklch(96.8% 0.012 37.4);
+  --color-base-300: oklch(94.1% 0.012 43.3);
+  --color-base-content: oklch(31.8% 0.001 17.2);
+  --color-primary: oklch(69.7% 0.118 37.5);
+  --color-primary-content: oklch(96.8% 0.012 37.4);
+  --color-secondary: oklch(69.4% 0.094 131.8);
+  --color-secondary-content: oklch(98.5% 0.013 130.8);
+  --color-accent: oklch(53.2% 0.258 269.4);
+  --color-accent-content: oklch(94.4% 0.023 280.6);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(51.3% 0.106 232.7);
+  --color-info-content: oklch(98.8% 0.001 286.4);
+  --color-success: oklch(76.6% 0.169 161.5);
+  --color-success-content: oklch(28.5% 0.059 165.6);
+  --color-warning: oklch(77% 0.174 64.1);
+  --color-warning-content: oklch(96.5% 0.023 78.2);
+  --color-error: oklch(50.1% 0.178 28.7);
+  --color-error-content: oklch(94.9% 0.021 24.8);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: false;
+  prefersdark: false;
+  color-scheme: "dark";
+  --color-base-100: oklch(20.9% 0 0);
+  --color-base-200: oklch(22.2% 0 0);
+  --color-base-300: oklch(28.1% 0 0);
+  --color-base-content: oklch(95.2% 0 0);
+  --color-primary: oklch(82.7% 0.053 36.1);
+  --color-primary-content: oklch(33.3% 0.049 36.9);
+  --color-secondary: oklch(89.9% 0.055 131.1);
+  --color-secondary-content: oklch(39.5% 0.049 131.2);
+  --color-accent: oklch(72% 0.105 277.9);
+  --color-accent-content: oklch(24% 0.097 271.8);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(98.8% 0.001 286.4);
+  --color-info: oklch(80% 0.084 223.8);
+  --color-info-content: oklch(31.9% 0.063 229.3);
+  --color-success: oklch(85.3% 0.108 170.8);
+  --color-success-content: oklch(36.9% 0.079 164);
+  --color-warning: oklch(86% 0.105 95.4);
+  --color-warning-content: oklch(36.5% 0.075 93.2);
+  --color-error: oklch(74.9% 0.1 22.8);
+  --color-error-content: oklch(27.9% 0.09 27.5);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+.roboto-serif {
+  font-family: "Roboto Serif", Georgia, serif;
+}
+
+.merriweather {
+  font-family: "Merriweather", Georgia, serif;
+}
+
+.jetbrains-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.post-title,
+.post-excerpt {
+  transition: opacity 0.3s ease;
+}
+
+.post-details:hover .post-title,
+.post-details:hover .post-excerpt {
+  opacity: 0.3;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-wave {
+  display: inline-block;
+  animation: wave-animation 2s forwards;
+  animation-delay: 1s;
+  transform-origin: 70% 70%;
+}
+
+@keyframes fade-fly-blur {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fade-blur {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.reveal-fade-fly-blur {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(8px);
+  animation: fade-fly-blur 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.reveal-blur {
+  opacity: 0;
+  filter: blur(8px);
+  animation: fade-blur 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.animation-delay-150 {
+  animation-delay: .25s;
+}
+
+.animation-delay-300 {
+  animation-delay: .5s;
+}
+
+.animation-delay-700 {
+  animation-delay: 1s;
+}
+
+@keyframes open-curtain-left {
+  to {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+}
+
+@keyframes open-curtain-right {
+  to {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+}
+
+.curtain-left,
+.curtain-right {
+  content: '';
+  filter: blur(8px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+}
+
+.curtain-left {
+  left: 0;
+  clip-path: polygon(0 0, calc(100% - 100px) 0, calc(100% - 0px) 100%, 0 100%);
+  animation: open-curtain-left 1s cubic-bezier(0.7, 0, 1, 1) forwards;
+  animation-delay: .5s;
+}
+
+.curtain-right {
+  right: 0;
+  clip-path: polygon(100px 0, 100% 0, 100% 100%, 0 100%);
+  animation: open-curtain-right 1s cubic-bezier(0.7, 0, 1, 1) forwards;
+  animation-delay: .5s;
+}
+
+article p:first-of-type::first-letter {
+  initial-letter: 3;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.article>*:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.article>h1,
+.article>h2,
+.article>h3,
+.article>h4,
+.article>h5,
+.article>h5,
+.article>h6 {
+  margin-bottom: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.article h1 a span::before,
+.article h2 a span::before,
+.article h3 a span::before,
+.article h4 a span::before,
+.article h5 a span::before,
+.article h6 a span::before {
+  cursor: pointer;
+  content: "#";
+  font-family: system-ui;
+  margin-right: 0.25rem;
+  opacity: 1;
+  transition: opacity .1s linear;
+}
+
+.blockquote {
+  padding: 1.25em 1em;
+  margin: 1em 0;
+}
+
+.btn-suggestion .trailing {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.btn-suggestion:hover .trailing {
+  opacity: 0.6;
+}
