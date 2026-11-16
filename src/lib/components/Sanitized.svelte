@@ -1,6 +1,6 @@
 <script lang="ts">
   import { browser } from '$app/env'
-  import DOMPurify from 'isomorphic-dompurify'
+  import DOMPurify from 'dompurify'
 
   let { html } = $props()
 </script>
