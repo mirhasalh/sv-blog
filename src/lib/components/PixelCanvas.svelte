@@ -173,6 +173,8 @@
 
 <style>
   canvas.pixel-canvas {
+    width: 100%;
+    height: 0px;
     pointer-events: none;
     display: block;
     position: relative;

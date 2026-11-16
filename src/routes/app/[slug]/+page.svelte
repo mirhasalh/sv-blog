@@ -55,7 +55,7 @@
             <li>
               {#if url.slug === 'internal-testing'}
                 <button class="btn btn-primary" onclick={() => pageState.requestInternalTesting()}>
-                  <span>{l10n('joinTesting')}</span>
+                  <span class="roboto-serif">{l10n('joinTesting')}</span>
                 </button>
               {:else}
                 <a class="block rounded-lg border border-base-content/5 transition-colors duration-200 hover:border-primary" href={url.url} target="_blank" rel="noopener noreferrer" aria-describedby="open-in-new-tab">
@@ -64,7 +64,7 @@
                   {:else if url.slug === 'ios'}
                     <AppleStore />
                   {:else}
-                    <span>{url.title}</span>
+                    <span class="roboto-serif">{url.title}</span>
                   {/if}
                 </a>
               {/if}
