@@ -51,7 +51,7 @@
 
   <meta property="og:title" content={data.post.title} />
   <meta property="og:description" content={data.post.excerpt} />
-  <meta property="og:image" content={`${domain}/${data.post.slug}.png`} />
+  <meta property="og:image" content={`${domain}/${data.post.image}`} />
   <meta property="og:url" content={`${domain}/post/${data.post.slug}`} />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content={data.post.publishedAt} />
@@ -60,7 +60,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.post.title} />
   <meta name="twitter:description" content={data.post.excerpt} />
-  <meta name="twitter:image" content={`${domain}/${data.post.slug}.png`} />
+  <meta name="twitter:image" content={`${domain}/${data.post.image}`} />
 
   <link rel="canonical" href={`${domain}/post/${data.post.slug}`} />
 </svelte:head>
@@ -77,7 +77,7 @@
     <h1 class="merriweather mt-10 text-3xl font-bold">{data.post.title}</h1>
     <p class="roboto-serif py-6 text-sm opacity-60">{data.post.excerpt}</p>
     <figure>
-      <img class="rounded-lg" src={`${domain}/${data.post.slug}.png`} alt={data.post.title} width={sizes.width} height={sizes.height} />
+      <img class="rounded-lg" src={`${domain}/${data.post.image}`} alt={data.post.title} width={sizes.width} height={sizes.height} />
       <figcaption class="hidden">{data.post.title}</figcaption>
     </figure>
   </header>

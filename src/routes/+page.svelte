@@ -184,7 +184,7 @@
             </div>
             <a class="post-details block space-y-6" href={`/post/${post.slug}`} aria-label={post.title}>
               <figure>
-                <img src={`${domain}/${post.slug}.png`} alt={post.title} width={sizes.width} height={sizes.height} />
+                <img src={`${domain}/${post.image}`} alt={post.title} width={sizes.width} height={sizes.height} />
               </figure>
               <h3 class="merriweather post-title text-2xl font-bold">
                 {post.title}
