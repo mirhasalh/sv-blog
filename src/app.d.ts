@@ -47,13 +47,19 @@ declare global {
       urls: MobileAppUrl[];
       year: number;
     }
-    interface Work {
+    interface WorkHistory {
       id: string;
       title: string;
+      role: string;
+      category: string;
+      organization: string;
       description: string;
-      imgFileName: string;
-      year: number;
-      urls: string[];
+      location: string;
+      isCurrent: boolean;
+      from: string;
+      to: string;
+      highlights: string[];
+      tags: string[];
     }
     interface TocItem {
       id: string;
@@ -67,4 +73,4 @@ declare global {
   }
 }
 
-export { }
+export {}

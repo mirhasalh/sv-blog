@@ -88,8 +88,8 @@ const postsPrefix = publicEnv.postsPrefix,
   appsPrefix = publicEnv.appsPrefix,
   appsSuffix = publicEnv.appsSuffix,
   appQuery = publicEnv.appQuery,
-  worksPrefix = publicEnv.worksPrefix,
-  worksSuffix = publicEnv.worksSuffix
+  workHistoryPrefix = publicEnv.workHistoryPrefix,
+  workHistorySuffix = publicEnv.workHistorySuffix
 
 export const getPosts = async (page: number, limit: number): Promise<App.Post[]> => {
   const from = (page - 1) * limit
@@ -147,11 +147,11 @@ export const getMobileApp = async (slug: string): Promise<App.MobileApp> => {
   return (res.result as App.MobileApp[])[0]
 }
 
-export const getWorkHistory = async (page: number, limit: number): Promise<App.Work[]> => {
+export const getWorkHistory = async (page: number, limit: number): Promise<App.WorkHistory[]> => {
   const from = (page - 1) * limit
   const to = from + limit
-  const res = await get(`${worksPrefix}${from}...${to}${worksSuffix}`)
-  return res.result as App.Work[]
+  const res = await get(`${workHistoryPrefix}${from}...${to}${workHistorySuffix}`)
+  return res.result as App.WorkHistory[]
 }
 
 export const loadImage = async (imageUrl: string) => {

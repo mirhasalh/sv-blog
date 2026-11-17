@@ -56,7 +56,7 @@ export default {
       page: 'Page',
       send: 'Send',
       loading: 'Loading',
-      seeMore: 'See more'
+      loadMore: 'See more'
     },
     workHistorySection: {
       heading: 'Where I\'ve worked',
@@ -120,7 +120,7 @@ export default {
       page: 'Halaman',
       send: 'Kirim',
       loading: 'Memuat...',
-      seeMore: 'Muat lebih banyak'
+      loadMore: 'Muat lebih banyak'
     },
     workHistorySection: {
       heading: 'Perjalanan kerja',

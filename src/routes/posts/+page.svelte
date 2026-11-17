@@ -170,7 +170,7 @@
                     {l10n('uiLabel.loading')}
                     <span class="loading loading-sm loading-spinner" aria-hidden="true"></span>
                   {:else}
-                    {l10n('uiLabel.seeMore')}
+                    {l10n('uiLabel.loadMore')}
                     <ArrowDownward class="h-4 w-4" />
                   {/if}
                 </button>
