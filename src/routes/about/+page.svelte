@@ -65,6 +65,9 @@
           </li>
         {/each}
       </ul>
+      <a class="btn btn-primary" href="https://irhas.site/Resume_20250124-081909.pdf" target="_blank" rel="noopener noreferrer" aria-describedby="open-in-new-tab">
+        <span class="roboto-serif">{l10n('seeCV')}</span>
+      </a>
     </div>
   </section>
 </main>

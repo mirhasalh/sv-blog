@@ -43,7 +43,8 @@
   let postEl = $state<HTMLElement | null>(null)
   let firstSixPosts = $derived(posts.slice(0, 6))
   let postElWidth = $state(0)
-  let postColumnWidth = $derived(postElWidth < 672 ? postElWidth / 1 : postElWidth < 768 ? postElWidth / 2 : postElWidth / 3)
+  // Breakpoints (640px / 768px) minus 32px of horizontal hero padding
+  let postColumnWidth = $derived(postElWidth <= 608 ? postElWidth : postElWidth <= 736 ? postElWidth / 2 : postElWidth / 3)
 
   const initMsnry = async () => {
     if (postEl) {
@@ -171,36 +172,37 @@
           <h2 id="latest-posts" class="merriweather p-2 text-xl font-bold">{l10n('latestPosts')}</h2>
         </div>
       </header>
-      <ul class="list w-full" aria-labelledby="latest-posts" bind:this={postEl}>
+      <ul class={`${postColumnWidth === 0 ? 'flex w-full flex-wrap' : 'w-full'}`} aria-labelledby="latest-posts" bind:this={postEl}>
         {#each firstSixPosts as post (post.id)}
           {@const sizes = getImageSizeFromUrl(post.image)}
-          <li class="list-col post-item space-y-6 p-1" style={`width: ${postColumnWidth}px;`}>
-            <div></div>
-            <div class="flex gap-4">
-              <a class="roboto-serif link text-xs link-hover opacity-80" href={`/posts/s/?category=${post.category.toLocaleLowerCase()}`}>
-                {post.category}
+          {@const style = postColumnWidth === 0 ? 'width: auto;' : `width:${postColumnWidth}px;`}
+          <li class="post-item p-1" {style} class:max-w-xs={postColumnWidth === 0}>
+            <div class="border-1 border-primary/10 bg-base-100">
+              <div class="flex gap-4 p-4">
+                <a class="roboto-serif link text-xs link-hover opacity-80" href={`/posts/s/?category=${post.category.toLocaleLowerCase()}`}>
+                  {post.category}
+                </a>
+                <time class="roboto-serif text-xs opacity-80" datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+              </div>
+              <a class="post-details block" href={`/post/${post.slug}`} aria-label={post.title}>
+                <figure>
+                  <img src={`${domain}/${post.image}`} alt={post.title} width={sizes.width} height={sizes.height} />
+                </figure>
+                <h3 class="merriweather post-title mt-4 px-4 font-bold xl:text-2xl">
+                  {post.title}
+                </h3>
+                <p class="roboto-serif post-excerpt px-4 pt-2 pb-4 text-sm">
+                  {post.excerpt}
+                </p>
               </a>
-              <time class="roboto-serif text-xs opacity-80" datetime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
             </div>
-            <a class="post-details block space-y-6" href={`/post/${post.slug}`} aria-label={post.title}>
-              <figure>
-                <img src={`${domain}/${post.image}`} alt={post.title} width={sizes.width} height={sizes.height} />
-              </figure>
-              <h3 class="merriweather post-title text-2xl font-bold">
-                {post.title}
-              </h3>
-              <p class="roboto-serif post-excerpt">
-                {post.excerpt}
-              </p>
-            </a>
-            <div class="w-full border-b-1 border-base-content/5"></div>
           </li>
         {/each}
       </ul>
     </div>
   </section>
   <section class="hero" aria-labelledby="all-posts">
-    <div class="hero-content my-10 w-full max-w-xl flex-col rounded-lg bg-base-100 py-10">
+    <div class="hero-content mt-20 mb-10 w-full max-w-xl flex-col rounded-lg bg-base-100 py-10">
       <header class="w-full border-b-1 border-base-content/5 px-4">
         <div class="text-start">
           <h2 id="all-posts" class="merriweather text-2xl">{l10n('allPosts')}</h2>

@@ -28,10 +28,6 @@ export default {
     },
     latestPosts: 'Latest posts',
     marqueeTitle: 'Things I work with',
-    socials: 'Socials',
-    thankNote: 'Thanks for trying out this app before it\'s released! 🙏',
-    themes: 'Themes',
-    toc: 'Table of contents',
     posts: 'Posts',
     postsSection: {
       heading: 'Explore all articles',
@@ -49,6 +45,11 @@ export default {
       paragraphPrefix: 'Every character here is hand-drawn and animated in',
       paragraphSuffix: 'Move your mouse over them and they react. Each one is only 3 to 4 KB.'
     },
+    seeCV: 'See my CV',
+    socials: 'Socials',
+    thankNote: 'Thanks for trying out this app before it\'s released! 🙏',
+    themes: 'Themes',
+    toc: 'Table of contents',
     uiLabel: {
       close: 'Close',
       search: 'Search',
@@ -100,14 +101,15 @@ export default {
       heading: 'Kebijakan Privasi',
       timePrefix: 'Berlaku sejak:'
     },
-    readingTime: {
-      minute: (n: number) => `${n} menit baca`
-    },
     riveSection: {
       heading: 'Hei, karakter-karakter ini kubuat sendiri!',
       paragraphPrefix: 'Semua karakter di sini kugambar dan animasikan sendiri menggunakan',
       paragraphSuffix: 'Coba arahkan kursor ke mereka dan lihat reaksinya. Ukuran setiap karakter cuma sekitar 3–4 KB.'
     },
+    readingTime: {
+      minute: (n: number) => `${n} menit baca`
+    },
+    seeCV: 'Lihat CV',
     socials: 'Media sosial',
     thankNote: 'Terima kasih sudah mencoba aplikasi ini sebelum resmi diluncurkan! 🙏',
     themes: 'Tema',

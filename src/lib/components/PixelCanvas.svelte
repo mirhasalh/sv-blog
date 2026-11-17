@@ -173,11 +173,19 @@
 
 <style>
   canvas.pixel-canvas {
+    width: inherit;
+    height: 590px;
     pointer-events: none;
     display: block;
     position: relative;
     z-index: 1;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  @media screen and (min-width: 768px) {
+    canvas.pixel-canvas {
+      height: 469px;
+    }
   }
 </style>
