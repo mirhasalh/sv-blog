@@ -21,7 +21,7 @@
       const r = new rive.Rive({
         src: `${domain}/${fileName}`,
         canvas: canvasElement,
-        stateMachines: 'State Machine 1',
+        stateMachine: 'State Machine 1',
         autoplay: true,
         onLoad: () => {
           // Ensure the drawing surface is resized
