@@ -158,14 +158,14 @@
               </li>
             {/each}
             <li class="flex justify-center p-10">
-              {#if page >= end}
+              {#if loadingPosts ? false : page >= end}
                 <div class="roboto-serif tooltip" data-tip="All posts loaded">
                   <button class="btn btn-circle btn-sm" type="button" disabled>
                     <Check class="h-4 w-4" />
                   </button>
                 </div>
               {:else}
-                <button class="btn" type="button" onclick={onSeeMore}>
+                <button class="btn" class:btn-ghost={loadingPosts} type="button" onclick={onSeeMore}>
                   {#if loadingPosts}
                     {l10n('uiLabel.loading')}
                     <span class="loading loading-sm loading-spinner" aria-hidden="true"></span>
