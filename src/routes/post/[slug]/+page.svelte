@@ -93,9 +93,9 @@
     <div class="w-full border-b-1 border-primary"></div>
   </div>
 </section>
-<div class="flex flex-col xl:flex-row-reverse">
-  <aside class="xl-pb-0 border-base-content/10 px-8 pb-10 lg:border-l-1 lg:pt-4 xl:min-w-md xl:px-0" aria-labelledby="table-of-contents">
-    <div class="collapse border border-base-300 bg-base-100 xl:collapse-open xl:sticky xl:top-[80px] xl:w-max xl:border-none xl:bg-base-200">
+<div class="flex flex-col lg:flex-row-reverse">
+  <aside class="border-base-content/10 px-8 pb-10 lg:min-w-xs lg:border-l-1 lg:px-0 lg:pt-4 lg:pb-0" aria-labelledby="table-of-contents">
+    <div class="collapse border border-base-300 bg-base-100 lg:collapse-open lg:sticky lg:top-[80px] lg:min-w-0 lg:border-none lg:bg-base-200">
       <input type="checkbox" aria-label={`${l10n('toc')}`} aria-controls="post-toc" />
       <h2 id="table-of-contents" class="merriweather collapse-title font-semibold xl:pl-10 xl:text-2xl">{l10n('toc')}</h2>
       <div id="post-toc" class="collapse-content text-sm">
@@ -122,7 +122,7 @@
       </div>
     </div>
   </aside>
-  <main class="min-w-0 xl:flex-1">
+  <main class="min-w-0 lg:flex-1">
     <article class="article w-full p-4 sm:p-8" bind:this={parsedEl}>
       <Sanitized html={data.code} />
     </article>
