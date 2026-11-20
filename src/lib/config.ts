@@ -3,21 +3,11 @@ export const email = 'irhasm@outlook.com'
 export const socials = [
   {
     id: 0,
-    name: 'Facebook',
-    url: 'https://www.facebook.com/irhas03'
-  },
-  {
-    id: 1,
     name: 'GitHub',
     url: 'https://github.com/mirhasalh/sv-blog'
   },
   {
-    id: 2,
-    name: 'Instagram',
-    url: 'https://www.instagram.com/irhasdev/'
-  },
-  {
-    id: 3,
+    id: 1,
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/irhasdev/'
   }
