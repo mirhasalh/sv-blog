@@ -112,7 +112,7 @@
 </svelte:head>
 
 <main class="bg-base-200">
-  <section id="hero_1" class="relative hero min-h-[calc(100vh-256px)]" aria-labelledby="greeting">
+  <section id="hero_1" class="relative hero" aria-labelledby="greeting">
     <PixelCanvas />
     <div class="curtain-left bg-base-200"></div>
     <div class="curtain-right bg-base-200"></div>
