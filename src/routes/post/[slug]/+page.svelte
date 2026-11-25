@@ -31,6 +31,7 @@
     pageState.setCodeBlockStyle(parsedEl)
     pageState.setInlineCodeStyle(parsedEl)
     pageState.setLinkStyle(parsedEl)
+    pageState.setLinkAttributes(parsedEl)
     pageState.setBlockquoteStyle(parsedEl)
     pageState.setTableStyle(parsedEl)
     pageState.setTableHeaderStyle(parsedEl)
@@ -124,6 +125,7 @@
   </aside>
   <main class="min-w-0 lg:flex-1">
     <article class="article w-full p-4 sm:p-8" bind:this={parsedEl}>
+      <span id="open-in-new-tab" class="sr-only">Opens in a new tab.</span>
       <Sanitized html={data.code} />
     </article>
     <ul class="flex gap-1 px-4 pb-10 md:px-8">
