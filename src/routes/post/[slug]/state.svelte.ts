@@ -87,7 +87,7 @@ export class PostPageState {
   }
 
   setLinkAttributes = (htmlElement: HTMLElement) => {
-    htmlElement.querySelectorAll('a').forEach((linkEl) => {
+    htmlElement.querySelectorAll('p > a').forEach((linkEl) => {
       linkEl.setAttribute('target', '_blank')
       linkEl.setAttribute('rel', 'noopener noreferrer')
       linkEl.setAttribute('aria-describedby', 'open-in-new-tab')
