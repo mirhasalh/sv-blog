@@ -33,7 +33,7 @@
     results = res
   }
 
-  const onSeeMore = async () => {
+  const onLoadMore = async () => {
     if (loadingPosts) return
     page += 1
     if (app.loadedPages.includes(page)) {
@@ -165,12 +165,12 @@
                   </button>
                 </div>
               {:else}
-                <button class="btn" class:btn-ghost={loadingPosts} type="button" onclick={onSeeMore}>
+                <button class="btn" class:btn-ghost={loadingPosts} type="button" onclick={onLoadMore}>
                   {#if loadingPosts}
-                    {l10n('uiLabel.loading')}
+                    <span class="roboto-serif">{l10n('uiLabel.loading')}</span>
                     <span class="loading loading-sm loading-spinner" aria-hidden="true"></span>
                   {:else}
-                    {l10n('uiLabel.loadMore')}
+                    <span class="roboto-serif">{l10n('uiLabel.loadMore')}</span>
                     <ArrowDownward class="h-4 w-4" />
                   {/if}
                 </button>
